@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55FB6B97-2255-4D2E-971E-FE4AA0B5FE0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyReserveSystem</RootNamespace>
+    <AssemblyName>MyReserveSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administarator.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDetail.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicRoom.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="3_Complete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_Complete.Designer.cs">
+      <DependentUpon>3_Complete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentCategory.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorPosition.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Experience.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Period.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="1_ReservationMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_ReservationMain.Designer.cs">
+      <DependentUpon>1_ReservationMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reserve.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="4_ReserveSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4_ReserveSearch.Designer.cs">
+      <DependentUpon>4_ReserveSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Review.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Table_1.cs">
+      <DependentUpon>MedicalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="2_TreatmentItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_TreatmentItem.Designer.cs">
+      <DependentUpon>2_TreatmentItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="1_ReservationMain.resx">
+      <DependentUpon>1_ReservationMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_TreatmentItem.resx">
+      <DependentUpon>2_TreatmentItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_Complete.resx">
+      <DependentUpon>3_Complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="MedicalModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MedicalModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MedicalModel.edmx.diagram">
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MedicalModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MedicalModel.Context.cs</LastGenOutput>
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="MedicalModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedicalModel.edmx</DependentUpon>
+      <LastGenOutput>MedicalModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
